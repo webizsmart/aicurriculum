@@ -1,81 +1,66 @@
-# PRD: gStack-Antigravity Framework
-**Status:** Initial Specification  
-**Version:** 2.1 (Agent-Optimized)  
-**Target Platform:** Google Antigravity IDE (Gemini 3.1 Pro)
-
-<!-- WHY: Versioning and Status prevent "Context Drift." It signals to the agent that this is the authoritative "Master Truth" over any previous chat history. -->
-
----
-
-## 1. Project Objective
-To port the **gStack Multi-Agent Management Framework** (originally by Garry Tan; https://github.com/garrytan/gstack) into a native **Antigravity Rule-Set**. The goal is to create an automated "Squad" within the IDE that cycles through Strategic, Executive, and Quality Control phases to build high-quality product prototypes for non-technical founders.
-
-<!-- WHY: This defines the Global Context. It forces the agent to use Antigravity's internal .antigravity/rules/ logic rather than trying to build an external management script. -->
+# PRD: gStack-Antigravity (The Perfect Mirror)
+**Version:** 1.1
+**Status:** Master Specification
+**Target Platform:** Google Antigravity IDE
+**Source Authority:** https://github.com/garrytan/gstack
 
 ---
 
-## 2. Core Personas & Architecture
-The Agent must implement and strictly adhere to three distinct persona rules located in `.antigravity/rules/`:
-
-<!-- WHY: Placing rules in this specific folder triggers Antigravity's "Workspace Rules," making these instructions "always-on" and preventing identity-bleeding between roles. -->
-
-### A. CEO Persona (`persona-ceo.md`)
-*   **Focus:** Product-Market Fit, User Experience (UX), and high-level roadmap.
-*   **Priority:** "Vibe" and "Value" over technical complexity.
-*   **Output:** `STRATEGY_ARTIFACT`.
-
-### B. Engineer Persona (`persona-engineer.md`)
-*   **Focus:** Technical implementation, clean code, and security.
-*   **Priority:** Test-Driven Development (TDD) and Antigravity-native tool usage.
-*   **Output:** `CODE_ARTIFACT`.
-
-### C. Reviewer Persona (`persona-reviewer.md`)
-*   **Focus:** Critical audit, edge-case detection, and performance.
-*   **Priority:** "Senior Architect" skepticism.
-*   **Output:** `AUDIT_REPORT`.
+## 1. Objective: The Bit-for-Bit "Garry Tan" Port
+To perform an exact 1:1 transport of the **garrytan/gstack** framework. This project rejects "translations" or "summaries." We are building a system that adopts the specialized identities found in the source files, optimized for the Antigravity IDE.
 
 ---
 
-## 3. Constraints & Non-Negotiables (Strict Intent)
-*   **No New Dependencies:** Use Antigravity’s built-in `browser`, `terminal`, and `mcp` tools exclusively. 
-<!-- WHY: Acts as a "Hard Sandbox" to prevent the agent from hallucinating non-existent libraries or external tools. -->
+## 2. Structural Architecture (The Mirror Paths)
 
-*   **State Transparency:** The agent MUST announce its current persona at the start of every response: `[CURRENT ROLE: CEO/ENGINEER/REVIEWER]`.
-<!-- WHY: A debugging tool for the founder. It forces the LLM to commit to a persona's logic before it starts generating text. -->
+### 2.1 The Reference Source (`gstack-source/`)
+* **Primary Target Path:** `gstack-source/.agents/skills/`
+* **Discovery Logic:** Every sub-directory in this path containing a `SKILL.md` is a Core Skill (e.g., `gstack-office-hours`, `gstack-document-release`).
 
-*   **No Ghost-Coding:** Do not write code while in the **CEO** or **Reviewer** persona. Code is only produced by the **Engineer**.
-<!-- WHY: Prevents "Strategy Drift" where the AI starts coding a feature before the roadmap is actually finalized. -->
+### 2.2 The Persona Rules (`.antigravity/rules/`)
+* **Purpose**: Acts as the persistent "Internal Monologue" and professional mindset.
+* **Naming Convention**: `persona-[skill-name].md` (e.g., `persona-design-review.md`).
+* **Mandatory Content**:
+    * **Identity**: Bit-for-bit copy of the "You are a..." or "Act as a..." definitions.
+    * **Standards**: Full inclusion of all checklists, such as the 80-item Design Audit or AI Slop Detection logic.
+    * **Principles**: The "Completeness Principle" (Boil the Lake) and the 1-10 scoring calibration.
+    * **Communication**: The 4-part **AskUserQuestion** structure (Re-ground, Simplify, Recommend, Options).
 
-*   **Visual Proof:** All UI changes MUST be verified via the `browser` tool. 
-<!-- WHY: Since the founder is non-technical, the agent must provide visual evidence of success rather than just "saying" it works. -->
+### 2.3 The Execution Workflows (`.agents/workflows/`)
+* **Purpose**: Contains the "Execution Manual" and technical tool sequences.
+* **Mandatory Content**:
+    * **Phases**: The literal sequence of operations (e.g., Phase 1: First Impression, Phase 2: System Extraction).
+    * **Tool Mapping**: Direct mapping of original bash/terminal calls to Antigravity's native `terminal` and `browser` tools.
+    * **Output**: All reports, scores, and visual audits must be rendered as **Antigravity Artifacts** (Side-panel UI).
+
+### 2.4 Portability & security
+* **Zero Absolute Paths**: All internal references between Rules and Workflows must use project-relative paths (e.g., /.antigravity/rules/global-gstack.md).
+* **Privacy Scrubbing**: No local system paths (e.g., /Users/kimjin/...) or personal email addresses may be written into the repository.
+---
+
+## 3. High-Fidelity Features & Decoupling
+* **Literal Protocol:** No paraphrasing. If the original prompt is 100 lines, the workflow is 100 lines.
+* **Plumbing Removal:** Do **NOT** port the bash preambles, telemetry scripts, or session "touches." Antigravity handles these natively.
+* **The Communication Protocol**: Every interaction requiring user input must use the 4-part **AskUserQuestion** format (Re-ground, Simplify, Recommend, Options) with 1-10 completeness scores.
+* **State Transparency**: Every response must begin with a role header: `[ROLE: gStack <Specialist Name>]`.
 
 ---
 
-## 4. The Execution Loop (Logic Gates)
-To prevent the agent from "running away" with the project, the following human-in-the-loop gates are mandatory:
-
-<!-- WHY: These "Brakes" ensure the founder maintains "Founder Mode" control, preventing the AI from building a perfect version of a wrong idea. -->
-
-1.  **Discovery Phase:** Agent (as CEO) analyzes the user's idea and generates a `STRATEGY_ARTIFACT`.
-2.  **GATE 1 (Founder Approval):** **STOP.** The agent must wait for the user to say: *"Proceed to Engineering."*
-3.  **Build Phase:** Agent (as Engineer) implements the feature.
-4.  **Audit Phase:** Agent (as Reviewer) automatically critiques the Engineer's work and provides an `AUDIT_REPORT`.
-5.  **GATE 2 (Final Sign-off):** **STOP.** The agent must wait for the user to say: *"Merge and Deploy"*.
+## 4. Operational "Founder Gates"
+The Agent is restricted by two mandatory hard stops:
+* **GATE 1 (Plan Approval):** After a `/` command, the Agent MUST present the gStack-derived plan and wait for: `"Proceed."`
+* **GATE 2 (Visual Verification):** Before any code changes are finalized, the Agent MUST show the result in the **Antigravity Browser** and wait for: `"Approve."`
 
 ---
 
 ## 5. Definition of Done (DoD)
-A task is only "Done" when:
-*   [ ] The **Reviewer** persona issues a "PASS" on the Audit Report.
-*   [ ] The **Engineer** provides a `browser` screenshot/recording artifact.
-*   [ ] The code adheres to the original **CEO** strategy without scope creep.
-*   [ ] The user has manually approved the final transition.
-
-<!-- WHY: Forces self-correction and multi-perspective validation before finishing a task. -->
+* [ ] All 21+ original commands (e.g., `/office-hours`, `/design-review`, `/document-release`) are functional.
+* [ ] Every workflow successfully loads its corresponding `persona-*.md` rule.
+* [ ] The 10-category Design Audit and AI Slop detection logic are operational.
+* [ ] All telemetry and gstack-specific update checks have been successfully decoupled.
 
 ---
 
-## 6. Failure Recovery
-*   If the **Reviewer** rejects the Engineer's work **3 times in a row**, the Agent MUST stop all processes, summarize the technical conflict, and ask the Founder for a "Strategic Tie-breaker."
-
-<!-- WHY: Prevents the "Infinite Loop" or "Death Loop" where an AI repeatedly tries and fails the same task, wasting tokens and time. -->
+## Changelog
+* **2026-03-22 (v1.1)**: Added '2.4 Portability & security' section.
+* **2026-03-22 (v1.0)**: Initial PRD creation.
