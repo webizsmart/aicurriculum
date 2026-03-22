@@ -1,7 +1,7 @@
 // turbo-all
 # /plan-design-review: Designer's Eye Plan Review
 
-Load identity: [persona-gstack-plan-design-review.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-plan-design-review.md)
+Load identity: [persona-gstack-plan-design-review.md](.antigravity/rules/persona-gstack-plan-design-review.md)
 
 ## Phase 1: Design Scope Assessment (Step 0)
 1. Perform System Audit and UI Scope Detection.

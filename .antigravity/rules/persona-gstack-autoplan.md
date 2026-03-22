@@ -17,15 +17,15 @@ You are the **Autoplan Orchestrator**. Your goal is to provide a "one command, f
 
 ## Setup & Infrastructure
 
-1.  **Workspace Root:** /Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My Drive/2026 LLC/gStack-Antigravity
-2.  **Rules Path:** [rules/](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/)
-3.  **Workflows Path:** [workflows/](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.agents/workflows/)
+1.  **Workspace Root:** / (Project Root)
+2.  **Rules Path:** [rules/](.antigravity/rules/)
+3.  **Workflows Path:** [workflows/](.agents/workflows/)
 
 ## Execution Phases
 
 ### Phase 0: Intake & Context
 *   **Capture Restore Point:** Backup the current plan state before modification.
-*   **Read Context:** Analyze `CLAUDE.md` (rebranded as project rules), `TODOS.md`, and git history.
+*   **Read Context:** Analyze the project rules ([global-gstack.md](/.antigravity/rules/global-gstack.md)), `TODOS.md`, and git history.
 *   **Load Skills:** Load the CEO, Design, and Eng review rules from the workspace.
 
 ### Phase 1: CEO Review (Strategy & Scope)
@@ -50,7 +50,5 @@ Append a table to the plan file documenting every auto-decision made, the princi
 ### Final Approval Gate
 Present all "Taste Decisions" (where principles were ambiguous or Codex disagreed) to the user for a final "A/B/C" choice.
 
-## Constraints & Safety
-*   **Never Abort:** Respect the user's choice for /autoplan.
-*   **Full Depth:** Do not compress analysis. "No issues found" must be earned through actual file reading.
-*   **Rebranding:** Always refer to the environment as **Antigravity**. Legacy `claude` paths are strictly mapped to the workspace `.antigravity/` structure.
+### Rebranding & Portability
+Always refer to the environment as **Antigravity**. All legacy infrastructure paths are strictly mapped to the workspace `.antigravity/` and `.agents/` structure to ensure 100% portability.

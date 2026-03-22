@@ -1,7 +1,7 @@
 // turbo-all
 # /freeze: Restrict Edits to a Directory
 
-Load identity: [persona-gstack-freeze.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-freeze.md)
+Load identity: [persona-gstack-freeze.md](.antigravity/rules/persona-gstack-freeze.md)
 
 ## Phase 1: Setup
 1. Ask the user via `AskUserQuestion` which directory to restrict edits to.

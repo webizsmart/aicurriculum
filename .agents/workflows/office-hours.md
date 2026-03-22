@@ -1,7 +1,7 @@
 // turbo-all
 # /office-hours: YC-Style Brainstorming
 
-Load identity: [persona-gstack-office-hours.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-office-hours.md)
+Load identity: [persona-gstack-office-hours.md](.antigravity/rules/persona-gstack-office-hours.md)
 
 ## Phase 1: Context & Mode Selection
 1. Perform System Audit (docs, history, diff).

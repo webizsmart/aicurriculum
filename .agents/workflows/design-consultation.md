@@ -1,7 +1,7 @@
 // turbo-all
 # /design-consultation: Design System Implementation
 
-Load identity: [persona-gstack-design-consultation.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-design-consultation.md)
+Load identity: [persona-gstack-design-consultation.md](.antigravity/rules/persona-gstack-design-consultation.md)
 
 ## Phase 1: Product Discovery
 1. Check for `DESIGN.md`. If it exists, ask to update, fresh start, or cancel.

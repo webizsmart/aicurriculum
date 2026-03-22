@@ -1,7 +1,7 @@
 // turbo-all
 # /qa-only: Report-Only QA Testing
 
-Load identity: [persona-gstack-qa-only.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-qa-only.md)
+Load identity: [persona-gstack-qa-only.md](.antigravity/rules/persona-gstack-qa-only.md)
 
 ## Phase 1: Initialization
 1. Parse parameters (URL, Mode, Scope, Auth).

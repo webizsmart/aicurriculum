@@ -1,7 +1,7 @@
 // turbo-all
 # /plan-eng-review: Architecture & Execution Review
 
-Load identity: [persona-gstack-plan-eng-review.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-plan-eng-review.md)
+Load identity: [persona-gstack-plan-eng-review.md](.antigravity/rules/persona-gstack-plan-eng-review.md)
 
 ## Phase 1: Scope Challenge (Step 0)
 1. Perform the System Audit (history, diff, todos, pain points).

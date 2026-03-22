@@ -1,7 +1,7 @@
 // turbo-all
 # /design-review: Visual QA & Polish
 
-Load identity: [persona-gstack-design-review.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-design-review.md)
+Load identity: [persona-gstack-design-review.md](.antigravity/rules/persona-gstack-design-review.md)
 
 ## Phase 1: Setup & Ingestion
 1. Detect Target URL and scope. If no URL, enter diff-aware mode.

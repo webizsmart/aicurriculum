@@ -1,7 +1,7 @@
 // turbo-all
 # /cso: Chief Security Officer Audit
 
-Load identity: [persona-gstack-cso.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-cso.md)
+Load identity: [persona-gstack-cso.md](.antigravity/rules/persona-gstack-cso.md)
 
 ## Phase 1: Attack Surface mapping
 1.  **Endpoints:** Grep for `get`, `post`, `put`, `delete` in `.js`, `.ts`, `.py`, `.rb`, `.go`.

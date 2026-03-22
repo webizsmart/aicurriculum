@@ -1,11 +1,11 @@
 // turbo-all
 # /autoplan: Auto-Review Eng Pipeline
 
-Load identity: [persona-gstack-autoplan.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-autoplan.md)
+Load identity: [persona-gstack-autoplan.md](.antigravity/rules/persona-gstack-autoplan.md)
 
 ## Phase 0: Setup & Background
 1.  **Detection:** Run `ls -t ~/.gstack/projects/*/ | head -1` (rebranded to workspace context).
-2.  **Restore Point:** Backup the plan file to `/Users/kimjin/.gemini/antigravity/brain/` (or current project's context).
+2.  **Restore Point:** Backup the plan file to the current project's brain context.
 3.  **UI Scope:** Scan for `component`, `form`, `screen` to trigger Design Review.
 
 ## Phase 1: CEO Review (Strategy)

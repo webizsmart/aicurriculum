@@ -1,7 +1,7 @@
 // turbo-all
 # /document-release: Post-Ship Documentation Update
 
-Load identity: [persona-gstack-document-release.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-document-release.md)
+Load identity: [persona-gstack-document-release.md](.antigravity/rules/persona-gstack-document-release.md)
 
 ## Phase 1: Pre-flight & Diff Analysis
 1. Detect base branch and current branch.

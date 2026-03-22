@@ -1,7 +1,7 @@
 // turbo-all
 # /setup-deploy: Configure Deployment
 
-Load identity: [persona-gstack-setup-deploy.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-setup-deploy.md)
+Load identity: [persona-gstack-setup-deploy.md](.antigravity/rules/persona-gstack-setup-deploy.md)
 
 ## Phase 1: Detection
 1. Check for existing config in `README.md`.

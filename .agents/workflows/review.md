@@ -1,7 +1,7 @@
 // turbo-all
 # /review: Pre-Landing PR Review
 
-Load identity: [persona-gstack-review.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-review.md)
+Load identity: [persona-gstack-review.md](.antigravity/rules/persona-gstack-review.md)
 
 ## Phase 1: Setup & Detection
 1. Run the detected base branch logic (Step 0) using `gh pr view` or `gh repo view`.

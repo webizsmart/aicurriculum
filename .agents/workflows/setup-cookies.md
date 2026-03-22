@@ -1,7 +1,7 @@
 // turbo-all
 # /setup-cookies: Import Browser Cookies
 
-Load identity: [persona-gstack-setup-browser-cookies.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-setup-browser-cookies.md)
+Load identity: [persona-gstack-setup-browser-cookies.md](.antigravity/rules/persona-gstack-setup-browser-cookies.md)
 
 ## Phase 1: Picker Setup
 1. Verify `browse` binary readiness.

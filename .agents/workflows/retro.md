@@ -1,7 +1,7 @@
 // turbo-all
 # /retro: Engineering Retrospective
 
-Load identity: [persona-gstack-retro.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-retro.md)
+Load identity: [persona-gstack-retro.md](.antigravity/rules/persona-gstack-retro.md)
 
 ## Phase 1: Data Gathering
 1. Detect time window and compare mode.

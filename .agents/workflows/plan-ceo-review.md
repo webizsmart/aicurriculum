@@ -1,7 +1,7 @@
 // turbo-all
 # /plan-ceo-review: Strategy & Ambition Review
 
-Load identity: [persona-gstack-plan-ceo-review.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-plan-ceo-review.md)
+Load identity: [persona-gstack-plan-ceo-review.md](.antigravity/rules/persona-gstack-plan-ceo-review.md)
 
 ## Phase 1: Pre-Review System Audit
 1. Run history scan, diff stat, and pain point mapping.

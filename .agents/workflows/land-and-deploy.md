@@ -1,7 +1,7 @@
 // turbo-all
 # /land-and-deploy: Merge, Deploy, Verify
 
-Load identity: [persona-gstack-land-and-deploy.md](file:///Users/kimjin/Library/CloudStorage/GoogleDrive-hongkimjin@gmail.com/My%20Drive/2026%20LLC/gStack-Antigravity/.antigravity/rules/persona-gstack-land-and-deploy.md)
+Load identity: [persona-gstack-land-and-deploy.md](.antigravity/rules/persona-gstack-land-and-deploy.md)
 
 ## Phase 1: Pre-flight
 1. Verify `gh` auth and parse arguments (PR #, URL).
