@@ -29,12 +29,22 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 
-    // 선택된 패키지 추적 로직 추가
+    // 선택된 패키지 추적 및 스크롤 로직 강화
     let selectedKit = 'default';
-    document.querySelectorAll('.btn-kit, .btn-primary').forEach(btn => {
-        btn.addEventListener('click', () => {
+    document.querySelectorAll('.btn-kit, .hero-btns .btn-primary').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // 버튼이 링크(a)인 경우 기본 동작 제어
+            if (btn.tagName === 'A' && btn.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = btn.getAttribute('href');
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    targetEl.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
             selectedKit = btn.getAttribute('data-kit') || 'default';
-            console.log(`Selected Kit: ${selectedKit}`);
+            console.log(`Selected Kit Clicked: ${selectedKit}`);
         });
     });
 
