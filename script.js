@@ -29,6 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 
+    // 선택된 패키지 추적 로직 추가
+    let selectedKit = 'default';
+    document.querySelectorAll('.btn-kit, .btn-primary').forEach(btn => {
+        btn.addEventListener('click', () => {
+            selectedKit = btn.getAttribute('data-kit') || 'default';
+            console.log(`Selected Kit: ${selectedKit}`);
+        });
+    });
+
     // Form submission
     const form = document.querySelector('#apply-form');
     if (form) {
@@ -37,17 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
 
-            // 서식 데이터 추출
             const nameInput = form.querySelector('input[type="text"]');
             const emailInput = form.querySelector('input[type="email"]');
             
             const leadData = {
                 name: nameInput.value,
-                email: emailInput.value
+                email: emailInput.value,
+                kit: selectedKit
             };
 
             try {
-                // 로컬 서버로 요청 보냄
                 const response = await fetch('http://localhost:3000/apply', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -58,9 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.innerText = '다운로드 시작! 🎉';
                     btn.style.background = '#00c853';
                     
+                    // 선택된 패키지에 맞춰 PDF 파일 결정
+                    let downloadFile = 'AI_Insight_Guide.pdf';
+                    if (selectedKit === 'sales') downloadFile = 'Sales_Survival_Kit.pdf';
+                    
                     const link = document.createElement('a');
-                    link.href = './AI_Insight_Guide.pdf';
-                    link.download = 'AI_Insight_Guide.pdf';
+                    link.href = `./${downloadFile}`;
+                    link.download = downloadFile;
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
@@ -73,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 5000);
                 } else if (response.status === 409) {
                     const result = await response.json();
-                    alert(result.message); // "이미 신청 완료된 이메일입니다."
+                    alert(result.message);
                     btn.innerText = originalText;
                 } else {
                     throw new Error('서버 오류');
