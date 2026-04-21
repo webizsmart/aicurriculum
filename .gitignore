@@ -12,7 +12,18 @@ Thumbs.db
 *.tmp
 .gemini/
 .context/
-~/.gstack/
+
+# [Security] PII Data & Local Scripts
+leads.csv
+*.csv
+*.ps1
+*.ps1.bak
+screenshot.png
+
+# Node / Bun
+node_modules/
+.bun-build/
+dist/
 
 # Tool Output
 .gstack/
