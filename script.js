@@ -55,14 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    btn.innerText = '신청 완료! 🎉';
+                    btn.innerText = '다운로드 시작! 🎉';
                     btn.style.background = '#00c853';
+                    
+                    // [PDF 다운로드 로직 추가]
+                    const link = document.createElement('a');
+                    link.href = './AI_Insight_Guide.pdf';
+                    link.download = 'AI_Insight_Guide.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
                     form.reset();
                     
                     setTimeout(() => {
                         btn.innerText = originalText;
                         btn.style.background = '';
-                    }, 3000);
+                    }, 5000);
                 } else {
                     throw new Error('서버 오류');
                 }
