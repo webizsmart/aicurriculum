@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.innerText = '다운로드 시작! 🎉';
                     btn.style.background = '#00c853';
                     
-                    // [PDF 다운로드 로직 추가]
                     const link = document.createElement('a');
                     link.href = './AI_Insight_Guide.pdf';
                     link.download = 'AI_Insight_Guide.pdf';
@@ -72,6 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.innerText = originalText;
                         btn.style.background = '';
                     }, 5000);
+                } else if (response.status === 409) {
+                    const result = await response.json();
+                    alert(result.message); // "이미 신청 완료된 이메일입니다."
+                    btn.innerText = originalText;
                 } else {
                     throw new Error('서버 오류');
                 }
