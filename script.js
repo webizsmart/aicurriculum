@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // 선택된 패키지에 맞춰 PDF 파일 결정
                     let downloadFile = 'AI_Insight_Guide.pdf';
                     if (selectedKit === 'sales') downloadFile = 'Sales_Survival_Kit.pdf';
+                    if (selectedKit === 'pro') downloadFile = 'Expert_Survival_Kit.pdf';
                     
                     const link = document.createElement('a');
                     link.href = `./${downloadFile}`;
