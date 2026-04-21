@@ -458,11 +458,20 @@ footer {
     text-align: center;
     border: 1px solid var(--accent);
     color: var(--accent);
+    z-index: 10;
+    position: relative;
+    cursor: pointer;
+}
+
+.kit-card .btn-small:hover {
+    background: rgba(255, 183, 0, 0.1);
+    transform: scale(1.02);
 }
 
 .kit-card.featured .btn-small {
     background: var(--accent);
     color: var(--dark);
+    font-weight: 700;
 }
 
 /* Responsive */
