@@ -379,6 +379,92 @@ footer {
     font-weight: 600;
 }
 
+/* Niche Kits Section */
+#niche-kits {
+    padding: 100px 0;
+    background: var(--dark-secondary);
+}
+
+.kits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.kit-card {
+    background: var(--dark);
+    padding: 3rem 2rem;
+    border-radius: 25px;
+    border: 1px solid var(--glass);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.kit-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.kit-card.featured {
+    border: 2px solid var(--accent);
+    background: linear-gradient(180deg, var(--dark), #1a1a1a);
+}
+
+.kit-tag {
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: var(--accent);
+    color: var(--dark);
+    padding: 5px 40px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    transform: rotate(45deg);
+}
+
+.kit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.kit-card p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+.kit-features {
+    list-style: none;
+    margin-bottom: 2.5rem;
+    flex-grow: 1;
+}
+
+.kit-features li {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--white);
+    opacity: 0.8;
+}
+
+.kit-card .btn-small {
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.kit-card.featured .btn-small {
+    background: var(--accent);
+    color: var(--dark);
+}
+
 /* Responsive */
 @media (max-width: 968px) {
     #hero .container {
@@ -390,6 +476,7 @@ footer {
     .problem-grid { grid-template-columns: 1fr; }
     .solution-wrapper { grid-template-columns: 1fr; }
     .curriculum-steps { grid-template-columns: 1fr; }
+    .kits-grid { grid-template-columns: 1fr; }
     #apply-form { flex-direction: column; }
     #hero h1 { font-size: 3rem; }
 }
