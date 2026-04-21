@@ -15,7 +15,7 @@ git push origin main         # Push changes to GitHub (webizsmart/aicurriculum)
 /office-hours               # Business strategy & Design Doc generation
 /cso                        # Security scan & leak prevention
 /qa                         # Test the landing page functionality
-/graphify                   # Build a knowledge graph of business assets (inspired by safishamsi/graphify)
+/graphify                   # Build a knowledge graph (Skill: .antigravity/skills/graphify/SKILL.md)
 ```
 
 ## Security & Ethics (CRITICAL)
